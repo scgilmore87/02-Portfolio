@@ -1,0 +1,301 @@
+/* ----- Global CSS Rules & Element Rules ----- */
+
+* {   /* Universal selector formatting */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+body {
+    background-color: #cfcfcfd5;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+p {
+    font-size: 20px;
+}
+
+/* ----- HEADER SECTION ----- */
+.header {    /* Header formatting */
+    padding: 60px;
+    font-family:'Ink Free', 'Gabriola', 'Courier New', 'Arial', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    flex-wrap: wrap;
+}
+
+.header h1 {
+    padding-bottom: 10px;
+    float: right;
+    font-size: 50px;
+    background-image: linear-gradient(
+         -225deg,
+         #ffffff 10%,
+         #585757 33%,
+         #818181 67%,
+         #ececec 100%
+       );
+       background-size: auto auto;
+       background-clip: border-box;
+       background-size: 200% auto;
+       color: #fff;
+       background-clip: text;
+       text-fill-color: transparent;
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       animation: textclip 2.5s linear infinite;
+       display: inline-block;
+    }
+     @keyframes textclip {
+       to {
+         background-position: 200% center;
+       }
+}
+
+.header h1:hover {
+    text-transform: uppercase;
+}
+
+
+.header nav {   /* Navigation bar formatting */
+    padding-top: 5px;
+    margin-right: 10px;
+    float: left;
+    font-family: 'Ink Free', 'Gabriola', 'Courier New', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header nav ul {
+    list-style-type: none;
+}
+
+.header nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+    padding-right: 20px;
+    padding-left: 10px;
+    background-image: linear-gradient(
+    to right,
+    #ff3636,
+    #aa7474dc 50%,
+    rgb(255, 255, 255) 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 1s ease-in-out;
+}
+
+.header nav ul li:before {
+    content: '';
+    background: #646464;
+    display: block;
+    position: fixed;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    font-weight: bolder;
+  }
+
+.header nav ul li:hover {
+    background-position: 0;
+    transform: scale(2);
+    text-transform: uppercase;
+}
+
+.header nav ul li:hover::before {
+    width: 100%;
+}
+
+.main-image {   /* Header image formatting */
+    height: 400px;
+    width: 100%;
+    margin-bottom: 50px;
+    background: url("../images/nsbackground.jpg");
+    background-size: cover;
+    background-position: center;
+    border-top: 5px solid rgb(82, 80, 80);
+    border-bottom: 5px solid black;
+    position: relative;
+}
+
+.main-image::before {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(160, 160, 160, 0.63) 100%);
+	-webkit-transform: skewX(-15deg);
+	transform: skewX(-15deg);
+}
+.main-image:hover::before {
+	-webkit-animation: shine 1s;
+	animation: shine 3s;
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+/* ----- MAIN CONTENT ----- */
+.content {   /* Main content formatting */
+    width: 75%;
+    display: inline-block;
+    margin-left: 60px;
+    flex-wrap: wrap;
+}
+
+.content .card {   
+    margin-bottom: 125px;
+    padding: 45px;
+    height: 420px;
+    font-family: 'Ink Free', 'Gabriola', 'Courier New', 'Arial', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 20px;
+    transition: all 1.5s;
+    flex-wrap: wrap;
+}
+
+.content .card:hover {
+    background-color: #575757;
+    width: 125%;
+    height: 800px;
+    flex-wrap: wrap;
+}
+
+.content .card.contact {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.content .card img {
+    max-height: 300px;
+}
+
+.content .card h2 {
+    font-size: 50px;
+    transition: all 300ms;
+    text-align: center;
+    margin-left: 15px;
+    background-image: linear-gradient(
+    to right,
+    #000000,
+    #ff0000dc 50%,
+    rgb(255, 255, 255) 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 1s ease-in-out;
+}
+
+.content .card h2:before {
+    content: '';
+    background: #919191;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    font-weight: bolder;
+  }
+
+.content .card h2:hover {
+    background-position: 0;
+    transform: scale(1.50);
+    text-align: center;
+}
+
+.content .card.projects {   
+    margin-bottom: 150px;
+    padding: 45px;
+    height: 500px;
+    font-family: 'Ink Free', 'Gabriola', 'Courier New', 'Arial', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 20px;
+    transition: all 1.5s;
+}
+
+.content .card.projects:hover {
+    background-color: #575757;
+    width: 125%;
+    height: 800px;
+    flex-wrap: wrap;
+}
+
+.img-projects {  
+    border: 2px solid rgb(240, 240, 240);
+    transition: all 300ms;
+}
+
+.img-projects:hover {
+    transform: scale(2.2) rotate(-2deg);
+    border: 6px solid rgb(0, 0, 0);
+}
+
+.week1 {
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+
+
+.img-left {   /* Paragraph image formatting & added hover effects */
+    float: left;
+    margin-right: 25px;
+    border: 2px solid rgb(240, 240, 240);
+    transition: all 300ms;
+}
+
+.img-left:hover {
+    transform: scale(2) rotate(10deg);
+    border: 6px solid rgb(0, 0, 0);
+}
+
+.img-right {
+    float: right;
+    margin-left: 25px;
+    border: 2px solid grey;
+    transition: all 300ms;
+}
+
+.img-right:hover {
+    transform: scale(1.08);
+    border: 4px solid white;
+
+}
+
+/* --------- FOOTER SECTION --------- */
+
+.footer {    /* Page footer formatting */
+    padding: 30px;
+    clear: both;
+    font-family: 'Ink Free', 'Gabriola', 'Courier New', 'Arial', sans-serif;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 12px;
+}
