@@ -26,7 +26,7 @@ they are presented with responsive layout that adapts to their viewport.
 
 ## Application Screenshot & Deployment
 
-![Screenshot of website](./assets/images/scgilmore_portfolio_preview.png)
+![Screenshot of website](./Assets/images/scgilmore_portfolio_preview.png)
 
 Repository uploaded to [GitHub](
 https://github.com/scgilmore87/02-Portfolio)
